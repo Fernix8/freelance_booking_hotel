@@ -1,0 +1,17 @@
+.components {
+    &__toast {
+        &-content {
+            width: 30%;
+            position: fixed;
+            top: 75px;
+            right: 0;
+            color: $color-black;
+            z-index: 90000;
+
+            @include responsive(max-md) {
+                top: 0;
+                width: 100%;
+            }
+        }
+    }
+}

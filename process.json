@@ -1,0 +1,8 @@
+{
+    "apps": [
+        {
+            "name": "school_web",
+            "script": "npm run start"
+        }
+    ]
+}

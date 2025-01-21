@@ -1,0 +1,139 @@
+.components {
+    &__header {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: 10000;
+        padding: 20px 0;
+        max-height: 90px;
+        background-color: white;
+        // box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+        &--setting {
+            position: relative;
+            display: inline-block;
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+
+            &--container {
+                cursor: pointer;
+            }
+
+            &:hover &--user {
+                display: block;
+            }
+
+            &--user {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 120px;
+                background: white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                padding: 10px;
+                z-index: 1000;
+                transition:
+                    opacity 0.3s ease,
+                    visibility 0.3s ease;
+
+                li {
+                    list-style: none;
+                    margin: 5px 0;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 16px;
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+        ul {
+            gap: 30px;
+            @media screen and (max-width: 769px) {
+                display: flex;
+                flex-direction: column;
+                align-content: flex-start;
+                justify-content: flex-start;
+                position: fixed;
+                top: 60px;
+                right: -300px;
+                width: 200px;
+                height: 100vh;
+                background: #cecece;
+                box-shadow: -1px 3px 5px rgb(0, 0, 0.1);
+                padding: 40px 0 0 10px;
+                box-sizing: border-box;
+                transition: 0.8s ease;
+                z-index: 1111111;
+                &.active {
+                    right: 0;
+                }
+            }
+        }
+
+        a {
+            font-family: 'Noto Sans JP';
+            font-weight: 200;
+            font-style: normal;
+            color: black;
+            transition: 0.3s ease;
+            font-size: 20px;
+            @media screen and (max-width: 769px) {
+                color: black;
+            }
+            &.active {
+                color: black;
+            }
+            &:hover {
+                opacity: 0.7;
+                color: black;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 0;
+                left: 0;
+                bottom: -7px;
+                background: black;
+                height: 2px;
+                transition: 0.3s ease-out;
+                color: black;
+            }
+
+            &:hover::after {
+                width: 100%;
+                color: black;
+            }
+        }
+    }
+}
+
+.hover-link.active:hover {
+    opacity: 0.7;
+    color: black;
+    @media screen and (max-width: 769px) {
+        color: black;
+    }
+}
+
+.hover-link.active::after {
+    width: 100%;
+}
+
+#mobile {
+    display: none;
+    @media screen and (max-width: 769px) {
+        display: block;
+        font-size: 24px;
+    }
+}

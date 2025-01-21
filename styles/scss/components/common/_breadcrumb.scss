@@ -1,0 +1,21 @@
+.components {
+    &__breadcrumb {
+        display: flex;
+        padding: 0 0;
+        list-style: none;
+        &-item {
+            &::before {
+                float: left;
+                padding-right: 10px;
+                color: $color-blue-gray;
+                content: '/';
+            }
+            &:first-child {
+                padding-left: 0;
+                &::before {
+                    content: normal;
+                }
+            }
+        }
+    }
+}

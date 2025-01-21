@@ -1,0 +1,16 @@
+.components {
+    &__login {
+        &--email,
+        &--password {
+            border: 1px solid #d4d7e3;
+            border-radius: 12px;
+            background-color: #f7fbff;
+        }
+        &--signIn {
+            transition: background-color 0.3s ease;
+            &:hover {
+                background-color: #118ab2 !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+npm i && cp .env.stg.example .env && npm run build && pm2 delete temi_web || : && pm2 start process.json

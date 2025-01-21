@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+.pages {
+    &__home {
+        min-height: 100vh;
+        &--item {
+            @include responsive(xl) {
+                height: 75%;
+            }
+        }
+        &--content {
+            background-color: #fafafa;
+        }
+        &--header {
+            &--note {
+                font-family: 'Dancing Script', cursive;
+                font-optical-sizing: auto;
+                font-style: normal;
+                color: #7c6a46;
+                font-size: 50px;
+            }
+            &--note1 {
+                font-family: 'Raleway', sans-serif;
+                color: $color-black;
+                font-weight: bold;
+                font-optical-sizing: auto;
+                font-size: 60px;
+                font-style: normal;
+                @include responsive(xl) {
+                    font-size: 35px;
+                }
+            }
+            &--note2 {
+                font-family: 'Raleway', sans-serif;
+                color: $color-black;
+                font-optical-sizing: auto;
+                font-size: 15px;
+                font-style: normal;
+            }
+            &--btnBookNow {
+                background-color: #7c6a46 !important;
+                border-radius: 50px;
+                width: 165px;
+                height: 55px;
+                font-size: 20px;
+            }
+            &--btnPlay {
+                background-color: #00a699 !important;
+                border-radius: 50%;
+                height: 55px;
+                width: 55px;
+            }
+            &--bookRoom {
+                background-color: $color-white;
+                width: 82%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                position: absolute;
+                z-index: 10;
+                bottom: 90px;
+                height: 90px;
+                right: 240px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                @include responsive(xl) {
+                    bottom: 222px;
+                    right: 103px;
+                    width: 85%;
+                }
+                select {
+                    border: none;
+                    &:focus {
+                        border: none;
+                    }
+                }
+            }
+        }
+        &--benefit {
+            width: 280px;
+            height: 250px;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+    }
+}
